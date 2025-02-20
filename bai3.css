@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    gap: 1000px;
+    padding-left: 80px;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.title {
+    display: flex;
+}
+
+.title p {
+    background-color: white;
+    width: 80px;
+    margin-left: 15px;
+    height: 1px;
+}
+
+.body {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.main {
+    height: 400px;
+    background-color: blueviolet;
+}
+
+.for {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.for p {
+    background-color: blueviolet;
+    width: 100%;
+    height: 150px;
+}
+
+.pages {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.pg {
+    background-color: blueviolet;
+    width: 100%;
+    height: 250px;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: blueviolet;
+    width: 100%;
+    height: 70px;
+}
+
+.list {
+    display: none;
+}
+
+/* Giữ nguyên thanh đen (header) trên mọi màn hình */
+@media screen and (max-width: 1400px) {
+    .all {
+        background-color: rgba(255, 235, 205, 0.97);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .all {
+        background-color: rgb(250, 164, 135);
+    }
+
+    .title {
+        display: flex;
+    }
+
+    .title p {
+        display: block; 
+    }
+
+    .for {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pages {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .all {
+        background-color: cadetblue;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    /* Ẩn thanh trắng */
+    .title {
+        display: none;
+    }
+
+    .list {
+        padding-left: 50px;
+        display: flex;
+        color: aliceblue;
+    }
+
+    .pg {
+        height: 150px;
+    }
+
+    .for {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
